@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Koulen&family=Noto+Sans+TC:wght@500&display=swap");
+@import "./reset.scss";
+
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Noto Sans TC";
+}
+.wrap {
+  width: 1000px;
+  margin: 0 auto;
+  border: 1px solid #5686bf;
+  background: #5686bf;
+}
+h1 {
+  margin-top: 50px;
+  margin-bottom: 30px;
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+}
+.addtodo {
+  text-align: center;
+  position: relative;
+  input {
+    color: white;
+    background: #8daed4;
+    border: 1px solid #8daed4;
+    border-radius: 20px;
+    width: 700px;
+    font-size: 18px;
+    padding: 15px;
+    box-shadow: 3px 3px 5px #376091;
+    transition: box-shadow 0.4s;
+    margin-bottom: 50px;
+    &:focus {
+      box-shadow: 10px 5px 5px #376091;
+    }
+    &::placeholder {
+      color: white;
+      opacity: 0.7;
+    }
+  }
+  #add_btn {
+    color: #5686bf;
+    text-decoration: none;
+    font-size: 30px;
+    position: absolute;
+    right: 165px;
+    top: 10px;
+    transition: color 0.4s;
+    &:hover {
+      color: #bf5a56;
+    }
+  }
+}
+.folder {
+  margin:0 150px 150px 150px;
+  border-right:2px solid #5a56bf;
+  border-bottom:2px solid #5a56bf;
+  box-shadow:8px 8px 6px #376091;
+  padding-bottom:50px;
+  .allTask,
+  .finished,
+  .notyet {
+    transform: translateY(-2.1rem);
+    text-decoration: none;
+    color: white;
+    display:inline-block;
+    padding:10px;
+    box-shadow:5px 0px 3px black;
+    transform:translateY(-20px);
+    transition:transform 0.4s;
+  }
+  .select {
+    transform:translateY(-37px);
+  }
+  .allTask {
+    background: #376091;
+  }
+  .finished {
+    background: #56bf8f;
+  }
+  .notyet {
+    background: #bf5686;
+  }
+}
+
+#taskList {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  border: 1px solid #5a56bf;
+  margin: 30px 140px 50px 140px;
+  border-radius: 5px;
+  padding-top: 10px;
+}
+#taskList li {
+  background: #8daed4;
+  color: white;
+  padding: 20px;
+  border: 1px solid #8daed4;
+  width: 700px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  transition: color 0.3s, background 0.3s;
+}
+#taskList li a {
+  color: white;
+  text-decoration: none;
+  float: right;
+  transition: transform 0.4s;
+  &:hover {
+    transform: rotate(360deg);
+  }
+}
+.done {
+  text-decoration: line-through;
+  background: #bacde5 !important;
+  color: gray !important;
+}

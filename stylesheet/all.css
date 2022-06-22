@@ -1,0 +1,219 @@
+@import url("https://fonts.googleapis.com/css2?family=Koulen&family=Noto+Sans+TC:wght@500&display=swap");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Noto Sans TC";
+}
+
+.wrap {
+  width: 1000px;
+  margin: 0 auto;
+  border: 1px solid #5686bf;
+  background: #5686bf;
+}
+
+h1 {
+  margin-top: 50px;
+  margin-bottom: 30px;
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.addtodo {
+  text-align: center;
+  position: relative;
+}
+.addtodo input {
+  color: white;
+  background: #8daed4;
+  border: 1px solid #8daed4;
+  border-radius: 20px;
+  width: 700px;
+  font-size: 18px;
+  padding: 15px;
+  -webkit-box-shadow: 3px 3px 5px #376091;
+          box-shadow: 3px 3px 5px #376091;
+  -webkit-transition: -webkit-box-shadow 0.4s;
+  transition: -webkit-box-shadow 0.4s;
+  transition: box-shadow 0.4s;
+  transition: box-shadow 0.4s, -webkit-box-shadow 0.4s;
+  margin-bottom: 50px;
+}
+.addtodo input:focus {
+  -webkit-box-shadow: 10px 5px 5px #376091;
+          box-shadow: 10px 5px 5px #376091;
+}
+.addtodo input::-webkit-input-placeholder {
+  color: white;
+  opacity: 0.7;
+}
+.addtodo input::-moz-placeholder {
+  color: white;
+  opacity: 0.7;
+}
+.addtodo input:-ms-input-placeholder {
+  color: white;
+  opacity: 0.7;
+}
+.addtodo input::-ms-input-placeholder {
+  color: white;
+  opacity: 0.7;
+}
+.addtodo input::placeholder {
+  color: white;
+  opacity: 0.7;
+}
+.addtodo #add_btn {
+  color: #5686bf;
+  text-decoration: none;
+  font-size: 30px;
+  position: absolute;
+  right: 165px;
+  top: 10px;
+  -webkit-transition: color 0.4s;
+  transition: color 0.4s;
+}
+.addtodo #add_btn:hover {
+  color: #bf5a56;
+}
+
+.folder {
+  margin: 0 150px 150px 150px;
+  border-right: 2px solid #5a56bf;
+  border-bottom: 2px solid #5a56bf;
+  -webkit-box-shadow: 8px 8px 6px #376091;
+          box-shadow: 8px 8px 6px #376091;
+  padding-bottom: 50px;
+}
+.folder .allTask,
+.folder .finished,
+.folder .notyet {
+  -webkit-transform: translateY(-2.1rem);
+          transform: translateY(-2.1rem);
+  text-decoration: none;
+  color: white;
+  display: inline-block;
+  padding: 10px;
+  -webkit-box-shadow: 5px 0px 3px black;
+          box-shadow: 5px 0px 3px black;
+  -webkit-transform: translateY(-20px);
+          transform: translateY(-20px);
+  -webkit-transition: -webkit-transform 0.4s;
+  transition: -webkit-transform 0.4s;
+  transition: transform 0.4s;
+  transition: transform 0.4s, -webkit-transform 0.4s;
+}
+.folder .select {
+  -webkit-transform: translateY(-37px);
+          transform: translateY(-37px);
+}
+.folder .allTask {
+  background: #376091;
+}
+.folder .finished {
+  background: #56bf8f;
+}
+.folder .notyet {
+  background: #bf5686;
+}
+
+#taskList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  border: 1px solid #5a56bf;
+  margin: 30px 140px 50px 140px;
+  border-radius: 5px;
+  padding-top: 10px;
+}
+
+#taskList li {
+  background: #8daed4;
+  color: white;
+  padding: 20px;
+  border: 1px solid #8daed4;
+  width: 700px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  -webkit-transition: color 0.3s, background 0.3s;
+  transition: color 0.3s, background 0.3s;
+}
+
+#taskList li a {
+  color: white;
+  text-decoration: none;
+  float: right;
+  -webkit-transition: -webkit-transform 0.4s;
+  transition: -webkit-transform 0.4s;
+  transition: transform 0.4s;
+  transition: transform 0.4s, -webkit-transform 0.4s;
+}
+#taskList li a:hover {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
+.done {
+  text-decoration: line-through;
+  background: #bacde5 !important;
+  color: gray !important;
+}
