@@ -11,6 +11,7 @@ function add() {
   a.appendChild(document.createTextNode("X"));
   a.setAttribute("href", "#");
   li.appendChild(a);
+  document.getElementById("taskName").value='';
 }
 
 //分類-完成(會把li無class的篩選掉)
